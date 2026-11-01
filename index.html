@@ -1,4 +1,4 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"></head><body><title>CrossUno</title>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"></head><body><title>WORDECK</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -472,7 +472,7 @@ const RULES=`<h2>วิธีเล่น</h2><ul>
 <li>จบเกมเมื่อกองจั่วหมดและมีคนไม่เหลือไพ่ตัวอักษร หรือเมื่อ <b>ไม่มีใครได้แต้มติดต่อกัน 6 ตา</b> (ข้ามตา เปลี่ยนไพ่ ถูกยกคำกลับ นับเป็นตาที่ไม่ได้แต้ม) คนแต้มมากกว่าชนะ หักแต้มตัวอักษรที่เหลือในมือ</li></ul>
 <button class="btn go" data-act="closeModal">เข้าใจแล้ว</button>`;
 function menuModal(sel){
-  modal(`<h1>CrossUno</h1>
+  modal(`<h1>WORDECK</h1>
   <p>เกมการ์ดเรียงคำ ผสมการ์ดพิเศษแบบ UNO เล่นกับบอท</p>
   <div class="chips3">${['easy','normal','hard'].map(d=>`<button class="chip${d===sel?' on':''}" data-act="diff" data-d="${d}">${DIFFN[d]}</button>`).join('')}</div>
   <button class="btn go" data-act="start" data-d="${sel}">เริ่มเกม</button>
@@ -485,7 +485,7 @@ function renderTop(){
   $('pBot').innerHTML=`<span class="nm">บอท · ${DIFFN[G.diff]}</span><b>${G.p[1].score}</b><span class="sub">ไพ่ในมือ ${G.p[1].hand.length}</span>`;
   $('pMe').className='pl me'+(G.turn===0&&!G.over?' on':'');
   $('pMe').innerHTML=`<span class="nm">คุณ</span><b>${G.p[0].score}</b><span class="sub">ไพ่ในมือ ${G.p[0].hand.length}</span>`;
-  $('deckInfo').innerHTML=`<span class="logo">CROSSUNO</span>`+(G.dry>0?`<span class="dry${G.dry>=DRY_MAX-2?' hot':''}">ไร้แต้ม ${G.dry}/${DRY_MAX}</span>`:'');
+  $('deckInfo').innerHTML=`<span class="logo">WORDECK</span>`+(G.dry>0?`<span class="dry${G.dry>=DRY_MAX-2?' hot':''}">ไร้แต้ม ${G.dry}/${DRY_MAX}</span>`:'');
 }
 function renderFan(){
   const n=G.p[1].hand.length-(G.lay&&G.lay.pi===1?G.lay.items.length+(G.lay.skipCard?1:0)+(G.lay.mulCard?1:0):0);
